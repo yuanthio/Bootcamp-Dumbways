@@ -1,0 +1,183 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins';;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-image: url(img/background.jpg);
+    background-size: cover;
+    padding: 50px 100px;
+    gap: 30px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.498);
+    backdrop-filter: blur(10px);
+    align-items: center;
+    padding: 30px;
+    border-radius: 30px;
+    color: white;
+    position: sticky;
+    top: 10px;
+    z-index: 1;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 3px 10px;
+    border-radius: 20px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: black;
+    background-color: white;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+nav h3 {
+    font-family: "Libertinus Keyboard", system-ui;
+    font-size: 1.6em;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+    column-gap: 30px;
+}
+
+.container {
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+    box-shadow: 0 20px 15px rgba(0, 0, 0, 0.249);
+}
+
+.container .main {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.container .main p {
+    text-align: justify;
+}
+
+.container .main .about {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container .main .about .contact {
+    width: 200px;
+    background-color: rgb(27, 27, 27);
+    color: white;
+    padding: 4px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.container .main .about .download {
+    text-decoration: none;
+    color: black;
+}
+
+.container .main .social-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.container .main .social-media ul {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+    column-gap: 4px;
+}
+
+.container .main .social-media ul a {
+    color: black;
+    font-size: 1.4em;
+    padding: 7px 8px;
+    border-radius: 50%;
+    transition: .3s;
+}
+
+.container .main .social-media ul a:hover {
+    color: white;
+    background-color: black;
+    border-radius: 50%;
+}
+
+@keyframes animation-card{
+    from {
+        transform: translateY(0);
+    } to {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes animation-shadow{
+    from {
+        transform: scale(1);
+        background-color: rgba(0, 0, 0, 0.502);
+        filter: blur(2px);
+    } to {
+        transform: scale(1.1);
+        background-color: rgba(0, 0, 0, 0.308);
+        filter: blur(3px);
+    }
+}
+
+.container .main .social-media .card {
+    text-align: center;
+    background-color: rgb(27, 27, 27);
+    color: white;
+    width: 250px;
+    border-radius: 10px;
+    animation: animation-card .8s infinite alternate;
+}
+
+.container .main .social-media .card img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.container .main .social-media .card .card-body {
+    padding: 5px;
+}
+
+.container-card {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.container .main .social-media .shadow {
+    width: 100%;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.388);
+    border-radius: 50%;
+    filter: blur(3px);
+    animation: animation-shadow .8s infinite alternate;
+}
