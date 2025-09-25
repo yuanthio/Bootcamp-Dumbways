@@ -13,6 +13,10 @@ nav {
     z-index: 1;
 }
 
+nav ul {
+    width: 85%;
+}
+
 nav .collapse ul li a {
     color: white;
 }
@@ -23,6 +27,7 @@ nav .collapse ul li a:hover {
 
 nav .btn {
     border-radius: 50px;
+    width: 15%;
 }
 
 /* Section Contact */
@@ -30,4 +35,10 @@ form {
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.553);
     backdrop-filter: blur(5px);
+}
+
+@media (max-width: 992px) {
+    nav .btn {
+        width: 150px;
+    }
 }

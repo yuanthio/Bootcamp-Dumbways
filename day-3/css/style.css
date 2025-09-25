@@ -13,6 +13,10 @@ nav {
     z-index: 1;
 }
 
+nav ul {
+    width: 85%;
+}
+
 nav .collapse ul li a {
     color: white;
 }
@@ -23,6 +27,7 @@ nav .collapse ul li a:hover {
 
 nav .btn {
     border-radius: 50px;
+    width: 15%;
 }
 
 /* Section About */
@@ -44,4 +49,16 @@ nav .btn {
 
 .about .card {
     border: none;
+}
+
+@media (max-width: 576px) {
+    .about .col-lg-8 {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 992px) {
+    nav .btn {
+        width: 150px;
+    }
 }
