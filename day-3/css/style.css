@@ -36,6 +36,7 @@ nav .btn {
     background-color: rgba(0, 0, 0, 0.553);
     backdrop-filter: blur(5px);
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.37);
+    padding: 50px;
 }
 
 .about ul {
@@ -52,6 +53,10 @@ nav .btn {
 }
 
 @media (max-width: 576px) {
+    .about {
+        padding: 20px;
+    }
+
     .about .col-lg-8 {
         margin-bottom: 50px;
     }
