@@ -1,0 +1,74 @@
+body {
+    font-family: 'Poppins';
+}
+
+.top {
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Navbar */
+nav {
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.553);
+    backdrop-filter: blur(5px);
+    z-index: 99;
+}
+
+nav ul {
+    width: 85%;
+}
+
+nav .collapse ul li a {
+    color: white;
+}
+
+nav .collapse ul li a:hover {
+    color: rgb(245, 234, 115);
+}
+
+nav .btn {
+    border-radius: 50px;
+    width: 15%;
+}
+
+/* Add form */
+form {
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.553);
+    backdrop-filter: blur(5px);
+}
+
+/* Section List Project*/
+.projects {
+    background-color: #eaeaea;
+    backdrop-filter: blur(5px);
+}
+
+.projects h3 {
+    color: white;
+}
+
+/* Card */
+.card {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.324);
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.231);
+}
+
+@media (max-width: 992px) {
+    nav .btn {
+        width: 150px;
+    }
+}
+
+@media (max-width: 576px) {
+    .btns {
+        gap: 10px;
+    }
+}
