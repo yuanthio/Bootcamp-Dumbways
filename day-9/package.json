@@ -1,0 +1,19 @@
+{
+  "name": "day-8",
+  "version": "1.0.0",
+  "description": "Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index"
+  },
+  "type": "module",
+  "author": "Yuanthio Virly",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "hbs": "^4.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
