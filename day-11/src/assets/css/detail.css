@@ -1,0 +1,61 @@
+body {
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    padding: 50px 0;
+    font-family: 'Poppins';
+}
+
+/* Navbar */
+nav {
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.553);
+    backdrop-filter: blur(5px);
+    z-index: 1;
+}
+
+nav ul {
+    width: 85%;
+}
+
+nav .collapse ul li a {
+    color: white;
+}
+
+nav .collapse ul li a:hover {
+    color: rgb(245, 234, 115);
+}
+
+nav .btn {
+    border-radius: 50px;
+    width: 15%;
+}
+
+/* Detail */
+.detail {
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.553);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.37);
+    padding: 50px;
+}
+
+.detail img {
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.37);
+}
+
+.detail p {
+    text-align: justify;
+}
+
+@media (max-width: 576px) {
+    .detail {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    nav .btn {
+        width: 150px;
+    }
+}
