@@ -1,0 +1,51 @@
+<div class="container">
+    {{> navbar}}
+    {{#if session}}
+        <h3 class="text-white">Selamat Datang, {{ session }}</h3>
+    {{/if}}
+    <section class="about text-white">
+        <div class="row d-flex align-items-center gx-5">
+            <div class="col-lg-8 mb-md-5 mb-sm-5">
+                <h4 class="fw-bold">Hi Selamat Datang di Website Yuanthio Virly</h4>
+                <p style="text-align: justify;">Saya lulusan Universitas Pakuan, jurusan Ilmu Komputer. Selama
+                    menempuh pendidikan, saya terbiasa mempelajari dasar-dasar pemrograman, pengelolaan basis data,
+                    hingga analisis sistem. Saya memiliki ketertarikan yang besar pada bidang teknologi, khususnya
+                    dalam pengembangan sistem dan pemecahan masalah berbasis digital. Dengan semangat belajar yang
+                    tinggi serta kemampuan adaptasi yang baik, saya berkomitmen untuk terus mengembangkan diri dan
+                    memberikan kontribusi positif melalui dunia teknologi informasi.</p>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <a href="/contact" type="button" class="btn btn-dark"><i class="fa-solid fa-address-book"></i>
+                        Contact</a>
+                    <a href="#" type="button" class="btn btn-primary"><i class="fa-solid fa-download"></i> Download
+                        CV</a>
+                </div>
+                <div class="social-media mt-5">
+                    <ul class="ps-0 ms-0 d-flex">
+                        <li class="d-flex justify-content-center align-items-center me-4 bg-light rounded-circle">
+                            <a href="" class="text-decoration-none text-dark"><i
+                                    class="fa-brands fa-square-instagram"></i></a>
+                        </li>
+                        <li class="d-flex justify-content-center align-items-center me-4 bg-light rounded-circle">
+                            <a href="" class="text-decoration-none text-dark"><i class="fa-brands fa-facebook"></i></a>
+                        </li>
+                        <li class="d-flex justify-content-center align-items-center me-4 bg-light rounded-circle">
+                            <a href="" class="text-decoration-none text-dark"><i class="fa-brands fa-github"></i></a>
+                        </li>
+                        <li class="d-flex justify-content-center align-items-center me-4 bg-light rounded-circle">
+                            <a href="" class="text-decoration-none text-dark"><i class="fa-solid fa-globe"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card">
+                    <img src="../assets/img/profile.jpg" class="card-img-top" alt="Yuanthio Virly">
+                    <div class="card-body text-center">
+                        <h4 class="card-title">YuanthioVirly</h4>
+                        <p class="card-text">Fullstack Developer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

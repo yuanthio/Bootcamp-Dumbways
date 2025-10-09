@@ -1,0 +1,139 @@
+<section class="top py-5">
+    <div class="container">
+        {{> navbar}}
+        <div class="row d-flex justify-content-center">
+            {{#if status }}
+                {{#if (statusUrl status "add" )}}
+                    <div class="alert alert-success" role="alert">
+                        Project berhasil ditambah
+                    </div>
+                {{/if}}
+            {{/if}}
+            <div class="col-lg-6">
+                <form class="p-4 text-white" action="/projects" method="post">
+                    <h3 class="text-center mb-4 fw-bold">ADD MY PROJECT</h3>
+                    <div class="mb-3">
+                        <label for="nama" class="form-label">Nama Project</label>
+                        <input type="text" name="name" class="form-control" id="nama" required
+                            placeholder="Masukan Nama">
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="mb-3">
+                                <label for="startDate" class="form-label">Tanggal Mulai</label>
+                                <input type="date" name="startDate" class="form-control" id="startDate" required
+                                    placeholder="Masukan Tanggal Mulai">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="mb-3">
+                                <label for="endDate" class="form-label">Tanggal Akhir</label>
+                                <input type="date" name="endDate" class="form-control" id="endDate" required
+                                    placeholder="Masukan Tanggal Akhir">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Dekripsi</label>
+                        <textarea class="form-control" name="description" id="message" rows="3" required
+                            placeholder="Tulis..."></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Teknologi</label>
+                        <div class="row gy-3">
+                            <div class="col-lg-6 col-md-6 com-sm-6 col-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+                                    <label class="form-check-label" for="checkDefault">
+                                        Node JS
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 com-sm-6 col-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+                                    <label class="form-check-label" for="checkDefault">
+                                        Vue JS
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 com-sm-6 col-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+                                    <label class="form-check-label" for="checkDefault">
+                                        Golang
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 com-sm-6 col-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="checkDefault">
+                                    <label class="form-check-label" for="checkDefault">
+                                        Python
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="formFile" class="form-label">Upload Gambar</label>
+                        <input class="form-control" type="file" id="formFile">
+                    </div>
+                    <div class="btn-submit d-flex justify-content-end mt-5">
+                        <button type="submit" class="btn btn-dark px-5"><i class="fa-solid fa-paper-plane"></i>
+                            Kirim</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="projects py-5">
+    <div class="container">
+        {{#if status }}
+            {{#if (statusUrl status "delete" )}}
+                <div class="alert alert-success alertDelete mx" role="alert">
+                    Project berhasil dihapus
+                </div>
+            {{/if}}
+        {{/if}}
+        <div class="container">
+            <h3 class="text-center text-black mb-4 fw-bold">MY PROJECT</h3>
+            <div class="row list-projects gy-4 text-center">
+                {{#if projects.length}}
+                    {{#each projects}}
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">{{this.name}}</h5>
+                                <h6 class="card-subtitle mb-2 text-body-secondary">
+                                    {{ formatDate this.startdate}} - {{ formatDate this.enddate}}
+                                </h6>
+                                <p class="card-text my-4">{{this.description}}</p>
+                                <div class="row gx-1 gy-md-2 gy-sm-2 btns">
+                                    <div class="col-lg-6 d-grid">
+                                        <a class="btn btn-dark" href="" role="button">
+                                            <i class="fa-solid fa-edit"></i> Ubah
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <form action="/projects/delete/{{this.id}}" method="post" class="d-grid">
+                                            <button class="btn btn-dark">
+                                                <i class="fa-solid fa-trash"></i> Hapus
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
+                {{else}}
+                <div class="alert alert-warning" role="alert">
+                    Belum ada project 😢
+                </div>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</section>
