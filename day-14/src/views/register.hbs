@@ -1,0 +1,37 @@
+<form action="/register" method="post" enctype="multipart/form-data" class="p-4 my-5">
+    {{#if message}}
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        {{ message }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {{/if}}
+    <div class="img text-center mb-3">
+        <img src="../assets/img/logo.png" class="mb-2" width="60" alt="Logo Yuanthio Virly">
+        <h5>Silahkan Register</h5>
+    </div>
+    <div class="row mb-3">
+        <div class="col-lg-6 mb-3">
+            <label for="name" class="form-label"><i class="fa-solid fa-user"></i> Nama</label>
+            <input type="text" name="name" class="form-control" required placeholder="Masukan Nama" id="name">
+        </div>
+        <div class="col-lg-6 mb-3">
+            <label for="email" class="form-label"><i class="fa-solid fa-envelope"></i> Email</label>
+            <input type="email" name="email" class="form-control" required placeholder="Masukan Email" id="email">
+        </div>
+        <div class="col-lg-6 mb-3">
+            <label for="password" class="form-label"><i class="fa-solid fa-lock"></i> Password</label>
+            <input type="password" name="password" class="form-control" required placeholder="Masukan Password"
+                id="password">
+        </div>
+        <div class="col-lg-6 mb-3">
+            <label for="file" class="form-label"><i class="fa-solid fa-upload"></i> Upload Gambar</label>
+            <input type="file" name="pictureProfile" class="form-control" required id="file">
+        </div>
+    </div>
+    <div class="d-grid">
+        <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Kirim</button>
+    </div>
+    <div class="text-center mt-2">
+        <small>Sudah punya akun? <a href="/login" class="text-decoration-none">Login di sini</a></small>
+    </div>
+</form>

@@ -1,0 +1,19 @@
+body {
+    font-family: 'Poppins';
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+}
+
+form {
+    width: 700px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.553);
+    backdrop-filter: blur(5px);
+    color: white;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.37);
+}

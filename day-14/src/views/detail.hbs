@@ -1,0 +1,32 @@
+<div class="container">
+    {{> navbar}}
+    {{#if result}}
+    <section class="detail text-white">
+        <h3 class="fw-bold text-center mb-5">{{ result.name }}</h3>
+        <div class="row gy-md-4 gy-sm-4 mb-5">
+            <div class="col-lg-8">
+                <img src="../assets/img/upload_projects/{{ result.picture }}" alt="{{ result.name }}" class="img-fluid">
+            </div>
+            <div class="col-lg-4">
+                <div class="row">
+                    <div class="col-lg-12 col-md-6 col-sm-6">
+                        <h5 class="mb-4">Durasi</h5>
+                        <div class="row gy-3 mb-5 durasi">
+                            <h6 class="card-title"><i class="fs-3 fa-solid fa-calendar-week"></i> {{ formatDate result.startdate }} - {{ formatDate result.startdate }}</h6>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-6 col-sm-6">
+                        <h5 class="mb-4">Teknologi</h5>
+                        <div class="row teknologi gy-3">
+                            {{#each result.teknologi}}
+                                {{{techIconDetail this}}}
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row deskripsi">{{ result.description }}</div>
+    </section>
+    {{/if}}
+</div>

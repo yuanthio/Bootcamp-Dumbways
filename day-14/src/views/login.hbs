@@ -1,0 +1,26 @@
+<form action="/login" method="post" class="p-4">
+    {{#if message}}
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    {{/if}}
+    <div class="img text-center mb-3">
+        <img src="../assets/img/logo.png" class="mb-2" width="60" alt="Logo Yuanthio Virly">
+        <h5>Silahkan Login</h5>
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label"><i class="fa-solid fa-envelope"></i> Email</label>
+        <input type="email" name="email" class="form-control" required placeholder="Masukan Email" id="email">
+    </div>
+    <div class="mb-5">
+        <label for="password" class="form-label"><i class="fa-solid fa-lock"></i> Password</label>
+        <input type="password" name="password" class="form-control" required placeholder="Masukan Password" id="password">
+    </div>
+    <div class="d-grid">
+        <button type="submit" class="btn btn-primary"><i class="fa-solid fa-right-to-bracket"></i> Masuk</button>
+    </div>
+    <div class="text-center mt-2">
+        <small>Belum punya akun? <a href="/register" class="text-decoration-none">Register di sini</a></small>
+    </div>
+</form>
